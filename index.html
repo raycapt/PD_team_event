@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Performance Desk – Colombo Offsite Recap</title>
+  <style>
+    :root{
+      --bg:#0b1220;          /* deep navy */
+      --panel:#121a2b;       /* card bg */
+      --ink:#e6eefb;         /* text */
+      --muted:#b9c7e6;       /* secondary text */
+      --brand:#7cc9ff;       /* accents */
+      --accent:#a3ffa3;      /* success accents */
+      --warn:#ffd27c;        /* highlight */
+      --shadow: 0 10px 25px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:linear-gradient(180deg, #0a1020 0%, #0d1427 100%) fixed; color:var(--ink); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    a{color:var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+
+    /* Header */
+    header{position:relative; margin:18px 0 28px; padding:28px 24px; border-radius:var(--radius); background:radial-gradient(1200px 500px at 20% -50%, rgba(124,201,255,.25), transparent), linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); box-shadow:var(--shadow); overflow:hidden}
+    .topbar{display:flex; align-items:center; gap:18px}
+    .logo{width:329px; height:104px; border-radius:16px; background:#0b162b; display:grid; place-items:center; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06)}
+    .logo img{max-width:242px; max-height:110px; object-fit:contain}
+    .titles{display:flex; flex-direction:column; gap:4px}
+    .subtitle{color:var(--muted); font-weight:500; letter-spacing:.4px}
+    h1{margin:0; font-size: clamp(22px, 4.2vw, 38px); line-height:1.15}
+
+    .header-actions{margin-top:16px; display:flex; flex-wrap:wrap; gap:10px}
+    .btn{background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06)); color:var(--ink); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:10px 14px; font-weight:600; cursor:pointer; backdrop-filter:saturate(140%) blur(3px)}
+    .btn:hover{border-color:rgba(255,255,255,.2)}
+
+    /* Blocks */
+    section{margin:26px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+    .grid{display:grid; gap:16px}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width: 900px){ .grid.two, .grid.three{grid-template-columns:1fr} }
+
+    h2{margin:0 0 12px; font-size: clamp(20px, 3vw, 28px)}
+    h3{margin:8px 0 10px; font-size: clamp(18px, 2.4vw, 22px)}
+    .muted{color:var(--muted)}
+    .pill{display:inline-flex; align-items:center; gap:8px; font-size:14px; background:rgba(124,201,255,.12); color:#d9f1ff; padding:6px 10px; border:1px solid rgba(124,201,255,.25); border-radius:999px}
+    .ok{background:rgba(163,255,163,.12); border-color:rgba(163,255,163,.25); color:#d1ffd1}
+
+    ul{margin:8px 0 0 0; padding:0 0 0 18px}
+    li{margin:6px 0}
+
+    /* Table */
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:14px; box-shadow:var(--shadow)}
+    thead th{background:rgba(255,255,255,.06); text-align:left; padding:12px; font-weight:700; border-bottom:1px solid rgba(255,255,255,.1)}
+    tbody td{padding:12px; border-bottom:1px solid rgba(255,255,255,.06)}
+    tbody tr:nth-child(odd) td{background:rgba(255,255,255,.02)}
+
+    /* Footer */
+    footer{margin:32px 0 10px; color:var(--muted); font-size:14px; text-align:center}
+
+    /* Print */
+    @media print{
+      header, .header-actions{box-shadow:none}
+      .btn{display:none}
+      body{background:white; color:#111}
+      header, .card{background:white; border:1px solid #ddd; box-shadow:none}
+      a{color:#0645ad}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header id="top">
+      <div class="topbar">
+        <div class="logo" aria-label="Logo">
+          <!-- Replace logo.png with your logo path -->
+          <img src="logo.png" alt="Organization Logo" onerror="this.style.display='none'" />
+         
+        </div>
+        <div class="titles">
+        
+          <h1>Performance Desk -Team Event - Aug 2025 - Recap</h1>
+          
+        </div>
+      </div>
+	  
+      <div class="header-actions">
+        <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button class="btn" onclick="navigator.clipboard.writeText(location.href).then(()=>alert('Page link copied.'))">🔗 Copy Page Link</button>
+        <a class="btn" href="#links">📎 Jump to Links</a>
+      </div>
+    </header>
+	<div>
+		<center><img src="cover_transparent.png" alt="Cover Photo" onerror="this.style.display='none'" style="
+    width: 55%;
+"></center>
+	  </div>
+    <!-- Event Summary -->
+    <section aria-labelledby="summary-h2">
+      <div class="card">
+        <h2 id="summary-h2">Event Summary</h2>
+        <p>The Performance Desk team’s offsite event in Colombo was a highly engaging and productive session that brought together team members, Capt. Thomas, and Stathis for collaborative discussions on operational challenges, data quality issues, tool development, and the BOSS product roadmap.</p>
+        <p>The event fostered open dialogue, practical brainstorming, and critical feedback—geared toward enhancing performance, transparency, and collaboration across teams and with stakeholders.</p>
+        <p>The session also served as a platform for reviewing key tools in development, aligning expectations with Ops, and setting the stage for stronger engagement and execution moving forward. Given the success of this event, the team decided to make it a recurring quarterly online session to continue fostering innovation and collaboration.</p>
+      </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section aria-labelledby="takeaways-h2">
+      <h2 id="takeaways-h2">✅ Key Takeaways</h2>
+      <div class="grid three">
+        <!-- 1. Data Quality & Reporting -->
+        <div class="card">
+          <div class="pill">🔍 Data Quality &amp; Reporting</div>
+          <h3>Raise reliability of inputs</h3>
+          <p><strong>Issue:</strong> Poor data quality from vessels—particularly around hull events—requires manual verification via Sedna or other tools.</p>
+          <p><strong>Solution:</strong> Push adoption of the <em>Hull Events App</em> to ensure real-time, accurate data input from Ops.</p>
+          <p><strong>Strategic Comment (Stathis):</strong> For TC vessels, conduct own inspections when owners do not report; consider legal routes to enforce standards.</p>
+          <h4 class="muted" style="margin:10px 0 6px">Other ideas</h4>
+          <ul>
+            <li>Reduce fields in the Vessel Info Sheet to improve owner submissions.</li>
+            <li>Enforce selective chartering — “if not okay, drop the vessel.”</li>
+          </ul>
+        </div>
+
+        <!-- 2. Collaboration & Training -->
+        <div class="card">
+          <div class="pill ok">🤝 Communication, Collaboration &amp; Training</div>
+          <h3>Standardize and upskill Ops</h3>
+          <ul>
+            <li>Create a <strong>Critical Must‑Do</strong> checklist for Ops, backed by top‑down endorsement (Stathis and OD’s).</li>
+            <li>Ops training after implementation of:
+              <ul>
+                <li>New Route Optimization Module</li>
+                <li>New End of Voyage Report</li>
+                <li>Underperformance methodology (Time Loss % based)</li>
+              </ul>
+            </li>
+            <li><strong>Feedback mechanism:</strong> Ops to define their own training needs; PD to support willing learners.</li>
+            <li><strong>Awareness drive for Chartering:</strong> PD to run an initiative post‑launch of the <em>Sea Margins Module</em> and <em>Period Calculator</em>.</li>
+          </ul>
+        </div>
+
+        <!-- 3. Technology Tools & Enhancements -->
+        <div class="card">
+          <div class="pill">⚙️ Technology Tools &amp; Enhancements</div>
+          <h3>Priorities & progress</h3>
+          <p><strong>Hull Events App</strong></p>
+          <ul>
+            <li>Testing by PD, followed by Cape Ops.</li>
+            <li>Phase 2: Add comments from Port Ops review post‑cleaning.</li>
+            <li>Secure buy‑in from Rohit / Port‑Ops for rollout.</li>
+          </ul>
+          <p><strong>Vessel Insight Page</strong></p>
+          <ul>
+            <li>Align with OD’s before go‑live.</li>
+            <li>Add <em>Low Bunker Reserve</em> module.</li>
+            <li>Eliminate duplication with existing BOSS dashboards.</li>
+          </ul>
+          <p><strong>Period Calculator</strong></p>
+          <ul>
+            <li>Add scrubber calculations (Pritam).</li>
+            <li>Connect OMI data (Stathis).</li>
+            <li>Run user testing before rollout.</li>
+          </ul>
+          <ul>
+            <li><strong>Sea Margin Tool:</strong> Extensive testing before wider release.</li>
+            <li><strong>BOSS Roadmap:</strong> Pre‑Fix Tool development prioritized (Ankit).</li>
+          </ul>
+          <p><strong>CFD Simulation for Weather Retardation Matrix</strong></p>
+          <ul>
+            <li>Discuss with Amy &amp; Edwin for potential solutions.</li>
+            <li>Solution at hand: CFD simulation (Capes) with IRS — 50/50 cost sharing with BOSS.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section id="links" aria-labelledby="links-h2">
+      <div class="card">
+        <h2 id="links-h2">📎 Presentation Links</h2>
+        <div class="muted" style="margin-bottom:8px">All links open in a new tab.</div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:35%">Topic</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aanya</td>
+              <td><a target="_blank" rel="noopener" href="https://tinyurl.com/2p9ptaj5">https://tinyurl.com/2p9ptaj5</a></td>
+            </tr>
+            <tr>
+              <td>Technical Presentation</td>
+              <td><a target="_blank" rel="noopener" href="https://tinyurl.com/y39jtv7y">https://tinyurl.com/y39jtv7y</a></td>
+            </tr>
+            <tr>
+              <td>BOSS Roadmap</td>
+              <td><a target="_blank" rel="noopener" href="https://tinyurl.com/593hwrmr">https://tinyurl.com/593hwrmr</a></td>
+            </tr>
+            <tr>
+              <td>Project Updates</td>
+              <td><a target="_blank" rel="noopener" href="https://tinyurl.com/3f7j9vdr">https://tinyurl.com/3f7j9vdr</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Looking Ahead -->
+    <section aria-labelledby="future-h2">
+      <div class="card">
+        <h2 id="future-h2">📅 Looking Ahead – Quarterly Collaboration</h2>
+        <p>Given the value derived from this event, the team agreed to institutionalize quarterly collaborative sessions with Capt. Thomas and Stathis.</p>
+        <div class="grid two">
+          <div>
+            <p class="pill" style="margin:0 0 8px 0">📆 Cadence</p>
+            <ul>
+              <li><strong>When:</strong> 1st Wednesday of <em>December</em>, <em>March</em>, <em>July</em>, and <em>September</em>.</li>
+              <li><strong>Time:</strong> 1600 SGP / 1200 DUB.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pill ok" style="margin:0 0 8px 0">🎯 Purpose</p>
+            <ul>
+              <li>Maintain momentum on tools and training.</li>
+              <li>Strengthen alignment across Ops, PD, and leadership.</li>
+              <li>Surface blockers early; accelerate delivery.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Prepared for internal circulation • Last updated: <span id="dt"></span></p>
+      <p><a href="#top">↑ Back to top</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Set the "Last updated" date
+    const d=new Date();
+    document.getElementById('dt').textContent = d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'2-digit'});
+  </script>
+</body>
+</html>
